@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  DOCKER_IMAGE: bbtlabapp01
+  DOCKER_IMAGE: docker.io/bbtlabapp01
 
 jobs:
   build:
