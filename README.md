@@ -20,7 +20,8 @@ bbtlab-app01-ci-cd/
 │   └── workflows/
 │       └── ci-cd.yml
 ├── app/
-│   ├── app.py
+│   ├── __init__.py
+│   ├── main.py
 │   ├── templates/
 │   │   ├── index.html
 │   │   ├── about.html

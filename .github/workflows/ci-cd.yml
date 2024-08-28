@@ -46,6 +46,6 @@ jobs:
         push: true
         tags: ${{ env.DOCKER_IMAGE }}:${{ github.sha }}
 
-    #- name: Deploy
+  Deploy:
     #  run: |
         # Add deployment commands here, e.g., pushing the Docker image to a registry
