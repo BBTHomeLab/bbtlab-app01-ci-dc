@@ -53,8 +53,8 @@ Ensure you have the following installed on your local machine:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/flask-app-ci-cd.git
-   cd flask-app-ci-cd
+   git clone https://github.com/BBTHomeLab/bbtlab-app01-ci-dc.git
+   cd bbtlab-app01-ci-dc
    ```
 2. **Create a virtual environment:**
    ```bash
