@@ -1,12 +1,12 @@
 import unittest
-from app import create_app
+from app import app
 
 class FlaskAppTestCase(unittest.TestCase):
     
     @classmethod
     def setUpClass(cls):
         # Create the Flask application instance for testing
-        cls.app = create_app()
+        cls.app = app()
         cls.client = cls.app.test_client()
         cls.app.testing = True
 
