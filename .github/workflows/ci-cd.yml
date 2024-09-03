@@ -4,16 +4,14 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 env:
   DOCKER_IMAGE: docker.io/bbamba/bbtlabapp01
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
+    needs: test
 
     steps:
     - name: Checkout code
@@ -29,10 +27,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    #- name: Run tests
-    #  run: |
-    #    pytest tests/
-
     - name: Log in to Docker registry
       uses: docker/login-action@v3
       with:
@@ -46,6 +40,6 @@ jobs:
         push: true
         tags: ${{ env.DOCKER_IMAGE }}:${{ github.sha }}
 
-  Deploy:
+          #  Deploy:
     #  run: |
         # Add deployment commands here, e.g., pushing the Docker image to a registry
