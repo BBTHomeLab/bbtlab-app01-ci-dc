@@ -40,7 +40,7 @@ pipeline {
             }
         }
 
-        stage('Setup Kubernetes Config') {
+        /*stage('Setup Kubernetes Config') {
             steps {
                 script {
                     // Set up kubeconfig
@@ -50,7 +50,7 @@ pipeline {
                     """
                 }
             }
-        }
+        }*/
 
          stage('Deploy to Kubernetes') {
             steps {
