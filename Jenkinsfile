@@ -56,7 +56,7 @@ pipeline {
             steps {
                 script {
                          // Apply the deployment YAML to the Kubernetes cluster
-                    sh 'kubectl apply -f /home/bbtadmin/myDeployments/bbtlabapp01/deployment.yml --namespace=${K8S_NAMESPACE}'
+                    sh 'kubectl apply -f /home/bbtadmin/myDeployments/bbtlabapp01/deployment.yml -o yaml --namespace=${K8S_NAMESPACE}'
 
                     // Check the rollout status of the deployment
                     sh "kubectl rollout status deployment/${DEPLOYMENT_NAME} --namespace=${K8S_NAMESPACE}"
