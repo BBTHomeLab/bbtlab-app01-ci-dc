@@ -63,21 +63,5 @@ pipeline {
                 }
             }
         }
-
-        post {
-          always {
-            // Clean up Docker images after the build
-            sh "docker rmi ${DOCKER_IMAGE}:latest || true"
-          }
-
-          success {
-            echo "Deployment successful!"
-          }
-
-          failure {
-            echo "Deployment failed."
-          }
-        }
-    
     }
 }
