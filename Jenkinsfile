@@ -50,7 +50,7 @@ pipeline {
                     """
                 }
             }
-        }*/
+        }*
 
          stage('Deploy to Kubernetes') {
             steps {
@@ -62,6 +62,6 @@ pipeline {
                     sh "kubectl rollout status deployment/${DEPLOYMENT_NAME} --namespace=${K8S_NAMESPACE}"
                 }
             }
-        }
+        }*/
     }
 }
